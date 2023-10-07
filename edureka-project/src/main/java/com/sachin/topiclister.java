@@ -24,9 +24,6 @@ public class topiclister {
             for (Map.Entry<String, TopicListing> entry : topicListingMap.entrySet()) {
                 System.out.println("Topic: " + entry.getKey() + ", TopicListing: " + entry.getValue());
             }
-
-            
-
         } catch (ExecutionException | InterruptedException e) {
             e.printStackTrace();
         }

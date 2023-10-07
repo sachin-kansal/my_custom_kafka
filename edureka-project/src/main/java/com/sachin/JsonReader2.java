@@ -12,7 +12,6 @@ import java.nio.file.Paths;
 
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-
 public class JsonReader2 {
     public json_obj[] JsonRead(String path){
 
