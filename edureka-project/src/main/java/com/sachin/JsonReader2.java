@@ -10,25 +10,25 @@ import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class JsonReader2 {
-    public static void main(String[] args){
+    public json_obj[] JsonRead(String path){
 
-        String filepath = ".\\edureka-project\\src\\main\\resources\\products.json";
+        // String filepath = ".\\edureka-project\\src\\main\\resources\\products.json";
         try{
-        byte[] jsonData = Files.readAllBytes(Paths.get(filepath));
+        byte[] jsonData = Files.readAllBytes(Paths.get(path));
         InputStream inputStream = new ByteArrayInputStream(jsonData);
         ObjectMapper objectMapper = new ObjectMapper();
         json_obj[] products = objectMapper.readValue(inputStream, json_obj[].class);
-
-        for (int i=0 ; i<=10; i++){
-            System.out.println(products[i]);
-        }
+            System.out.print(products[0]);
+        return products;
         
     }catch(Exception e){
             System.out.println(e);
+            return null;
         }
+        
 }
 }

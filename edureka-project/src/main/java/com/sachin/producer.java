@@ -11,7 +11,6 @@ public class producer {
         System.out.println("start");
         String topicname= "sachin";
        // String key= "k1";
-        String value= "hi-hello" ;
     // properties of producer application
     Properties props = new Properties();
     //props.put();
