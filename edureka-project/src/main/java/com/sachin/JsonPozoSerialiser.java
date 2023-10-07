@@ -3,7 +3,6 @@ package com.sachin;
  * Json Object are in pozo objects and are now biengserilised for producer
  */
 
-import java.util.Map;
 
 import org.apache.kafka.common.serialization.Serializer;
 
