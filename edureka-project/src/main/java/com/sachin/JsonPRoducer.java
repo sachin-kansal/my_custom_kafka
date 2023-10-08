@@ -26,7 +26,7 @@ public class JsonProducer {
             json_obj[] products= jreader.JsonRead(".\\edureka-project\\src\\main\\resources\\products.json");
             int i=0;
             while (i<products.length) {
-                ProducerRecord <String,json_obj> records = new ProducerRecord<String,json_obj>("jsontopic",products[i]);
+                ProducerRecord <String,json_obj> records = new ProducerRecord<String,json_obj>("jtop",products[i]);
                 i++;
                 jsonproducer.send(records, new Callback(){
                 @Override

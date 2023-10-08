@@ -21,10 +21,10 @@ public class JsonConsumer {
         props.setProperty(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "false");
 
         try (KafkaConsumer<String,json_obj> consumer = new KafkaConsumer<>(props)) {
-            consumer.subscribe(Arrays.asList("jsontopic"));
+            consumer.subscribe(Arrays.asList("jtop"));
 
             while (true){
-                ConsumerRecords<String,json_obj> records = consumer.poll(Duration.ofMillis(10));
+                ConsumerRecords<String,json_obj> records = consumer.poll(Duration.ofMillis(100));
                 for (ConsumerRecord<String, json_obj> record : records){
                     json_obj product = record.value();
                     System.out.println("revieved"+product.getbrand());
